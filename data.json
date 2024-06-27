@@ -1,0 +1,201 @@
+{
+  "user_tenant_roles": {
+    "1": {
+      "tenant_name": "Yogesh's Cycle Shop",
+      "223233432": {
+        "account_details": {
+          "account_type": "business checking"
+        },
+        "joe": {
+          "roles": ["ACCOUNT_ADMIN", "TAX_ADVISOR"]
+        },
+        "gayatri": {
+          "roles": ["ACCOUNT_ADMIN"]
+        }
+      }
+    },
+    "2": {
+      "tenant_name": "Yogesh Personal Accounts",
+      "4556676": {
+        "account_details": {
+          "account_type": "checking"
+        },
+        "joe": {
+          "roles": ["TAX_ADVISOR"]
+        },
+        "kshitij": {
+          "roles": ["ACCOUNT_OWNER"]
+        },
+        "rushi": {
+          "roles": ["MINOR_USER"]
+        },
+        "jay": {
+          "roles": ["MINOR_USER"]
+        },
+        "kannan": {
+          "roles": ["ACCOUNT_ADMIN"]
+        }
+      },
+      "5445344": {
+        "account_details": {
+          "account_type": "checking"
+        },
+        "joe": {
+          "roles": ["TAX_ADVISOR"]
+        },
+        "kannan": {
+          "roles": ["ACCOUNT_ADMIN"]
+        }
+      }
+    }
+  },
+  "user_attributes": {
+    "rushi": {
+      "current_week_expenditure": 6,
+      "weekly_limit": 20,
+      "monthly_limit": 100
+    },
+    "jay": {
+      "current_week_expenditure": 1,
+      "account_transaction_weekly_limit": 50,
+      "account_transaction_monthly_limit": 200,
+      "p2p_account_transfer_monthly_limit": 50,
+      "parent_approval": {
+        "approved": false,
+        "amount": 500,
+        "approved_id": "xyz",
+        "approved_date": "2024:02:23 23:23:22.222"
+      }
+    }
+  },
+  "role_grants": {
+    "ACCOUNT_OWNER": [
+      {
+        "action": "ACCOUNT_INVITE_ACCESS",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_TRANSACTION_ACCESS",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_BILL_PAY_ACCESS",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_STATEMENTS",
+        "type": "account_document"
+      },
+      {
+        "action": "ACCOUNT_TAX_STATEMENTS",
+        "type": "account_document"
+      },
+      {
+        "action": "ACCOUNT_WIRE_TRANSFER",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_P2P_TRANSFER",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_ROLE_MANAGEMENT",
+        "type": "account"
+      }
+    ],
+    "CO_OWNER": [
+      {
+        "action": "ACCOUNT_INVITE_ACCESS",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_BILL_PAY_ACCESS",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_STATEMENTS",
+        "type": "account_document"
+      },
+      {
+        "action": "ACCOUNT_TAX_STATEMENTS",
+        "type": "account_document"
+      },
+      {
+        "action": "ACCOUNT_TRANSACTION_ACCESS",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_ROLE_MANAGEMENT",
+        "type": "account"
+      }
+    ],
+    "ACCOUNT_ADMIN": [
+      {
+        "action": "ACCOUNT_TRANSACTION_ACCESS_WITH_LIMIT",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_BILL_PAY_ACCESS_WITH_LIMIT",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_ROLE_MANAGEMENT",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_STATEMENTS",
+        "type": "account_document"
+      },
+      {
+        "action": "ACCOUNT_TAX_STATEMENTS",
+        "type": "account_document"
+      }
+    ],
+    "MAJOR_USER": [
+      {
+        "action": "ACCOUNT_TRANSACTION_ACCESS_WITH_LIMIT",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_BILL_PAY_ACCESS_WITH_LIMIT",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_TRANSACTION_ACCESS_WITH_DATE",
+        "type": "account"
+      }
+    ],
+    "MINOR_USER": [
+      {
+        "action": "ACCOUNT_TRANSACTION_ACCESS_WITH_LIMIT",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_TRANSACTION_ACCESS_PER_WEEK_LIMIT",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_TRANSACTION_ACCESS_PER_MONTH_LIMIT",
+        "type": "account"
+      },
+      {
+        "action": "ACCOUNT_P2P_TRANSFER_WITH_LIMIT",
+		"type": "account"
+      },
+      {
+        "action": "ACCOUNT_TRANSACTION_ACCESS_WITH_PARENT_APPROVAL",
+        "type": "account"
+      }
+    ],
+    "TAX_ADVISOR": [
+      {
+        "action": "ACCOUNT_STATEMENTS",
+        "type": "account_document"
+      },
+      {
+        "action": "ACCOUNT_TAX_STATEMENTS",
+        "type": "account_document"
+      }
+    ]
+  }
+}
